@@ -1,0 +1,69 @@
+html{
+    height: 100%;
+}
+
+body{
+    /* display: flex; */
+    /* position: relative;
+    align-items: center;
+    justify-content: center; */
+    font-family: 'Maven Pro', sans-serif;
+    background-image: linear-gradient(90deg, #0c1d1d, #008080);
+    /* height: auto; */
+}
+
+header {
+    background-color: #C0C0C0	;
+    padding: 20px;
+    text-align: center;
+    width: 100wh;
+}
+h1 {
+    color: rgb(74, 53, 2);
+    font-size: 36px;
+}
+
+#myCanvas {
+    position: absolute;
+    top: 295px;   
+    left: 250px;
+    /* width: 400px;
+    height: 300px; */
+    background-image: linear-gradient(90deg, rgb(37, 37, 37), rgb(141, 140, 140));
+    /* background-position: center;
+    background-size: cover; */
+    border-radius: 2%;
+    }
+
+#inputImage{
+    color: white;
+    position: absolute;
+     top: 605px;   
+    left: 250px;
+} 
+
+#display_image_2 {
+    position: absolute;
+    top: 295px;   
+    right: 250px;
+    width: 400px;
+    height: 300px;
+    background-image: linear-gradient(90deg, rgb(53, 53, 53), rgb(163, 163, 163));
+    /* background-position: center;
+    background-size: cover; */
+    border-radius: 2%;
+    }
+
+
+.arrow {
+    position: absolute;
+    border: solid white;
+    top: 450px;
+    right: 20px;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    fill: white;
+    }

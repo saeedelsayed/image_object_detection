@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/page1.css')}}">
+    <title>Image Selection Example</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Contour object detection</h1>
+    </header>
+
+    <input type="file" id="inputImage" accept="image/*" onchange="loadImage()" />
+    <canvas id="myCanvas" width = 400px height =300px></canvas>
+
+
+    <div id="display_image_2"></div>
+
+    <a href="{{ url_for('page2') }}">
+      <i class="arrow right"></i>
+    </a>
+
+        <script src="{{ url_for('static', filename = 'js/page1.js') }}"></script>
+        
+  </body>
+</html>
