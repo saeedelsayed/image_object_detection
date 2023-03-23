@@ -4,7 +4,11 @@ let img = new Image();
 
 function loadImage() {
   img.onload = function() {
-    ctx.drawImage(img, 0, 0);
+    const width = canvas.width;
+    const scaleFactor = width / img.width;
+    const height = img.height * scaleFactor;
+    canvas.height = height;
+    ctx.drawImage(img, 0, 0, width, height);
   };
   img.src = URL.createObjectURL(document.getElementById('inputImage').files[0]);
 }

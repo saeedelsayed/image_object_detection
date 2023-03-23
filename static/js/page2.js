@@ -8,8 +8,18 @@ image_input.addEventListener("change", function(){
         document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
     });
     reader.readAsDataURL(this.files[0]);
+    
+    const display_image = document.querySelector("#display_image");
+    const img = new Image();
+    img.onload = function() {
+      const width = display_image.width;
+      const scaleFactor = width / img.width;
+      const height = img.height * scaleFactor;
+      display_image.height = height;
+      display_image.style.backgroundSize = "100% 100%";
+    };
+    img.src = URL.createObjectURL(this.files[0]);
 })
-
 
 
 
