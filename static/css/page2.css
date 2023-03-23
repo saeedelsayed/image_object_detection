@@ -25,6 +25,8 @@ h1 {
 
 #display_image {
     position: absolute;
+    width: 400px;
+    height: 300px;
     top: 295px;   
     left: 250px;
     width: 400px;
