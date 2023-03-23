@@ -27,7 +27,7 @@ canvas.addEventListener('mousemove', function(e) {
     endX = e.offsetX;
     endY = e.offsetY;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
     ctx.fillRect(startX, startY, endX - startX, endY - startY);
   }
