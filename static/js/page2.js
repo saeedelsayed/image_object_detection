@@ -9,3 +9,19 @@ image_input.addEventListener("change", function(){
     });
     reader.readAsDataURL(this.files[0]);
 })
+
+
+
+
+// Get the button element
+var dropdown = document.getElementsByClassName("dropbtn")[0];
+
+// Get all options inside the dropdown
+var options = document.getElementsByClassName("dropdown-content")[0].getElementsByTagName("a");
+
+// Add click event listener to each option
+for (var i = 0; i < options.length; i++) {
+options[i].addEventListener("click", function() {
+alert(this.innerHTML);
+});
+}

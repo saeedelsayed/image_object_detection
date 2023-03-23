@@ -16,6 +16,15 @@
         <div id="display_image"></div>
         <input type="file" id="image_input" accept="image/png, image/jpeg">
 
+        <div class="dropdown">
+          <button class="dropbtn">Detection type</button>
+          <div class="dropdown-content">
+          <a href="#">Line detection</a>
+          <a href="#">Circle detection</a>
+          <a href="#">Ellipse detection</a>
+          </div>
+          </div>
+
         <div id="display_image_2"></div>
 
         <a href="{{ url_for('page1') }}">
