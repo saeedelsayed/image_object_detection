@@ -32,4 +32,24 @@ canvas.addEventListener('mousemove', function(e) {
 canvas.addEventListener('mouseup', function(e) {
   isDragging = false;
   console.log(`Selected region: (${startX}, ${startY}) - (${endX}, ${endY})`);
+<<<<<<< Updated upstream:static/js/page1.js
 });
+=======
+
+  let formData = new FormData();
+  formData.append("startX",startX.toString());
+  formData.append("startY",startY.toString());
+  formData.append("endX",endX.toString());
+  formData.append("endY",endY.toString());
+  console.log
+  $.ajax({
+    type: "POST",
+    url: "/activeContour",
+    data: formData,
+    contentType: "application/json",
+    success: function (res) {
+      console.log(res);
+    }
+  })
+});
+>>>>>>> Stashed changes:static/js/contourPage.js
