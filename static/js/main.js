@@ -5,7 +5,9 @@ const submitBtn = document.getElementById("submit-btn");
 let cropper;
 let imageFile;
 
+
 imageInput.addEventListener("change", function (_) {
+    loadImage();
     const file = imageInput.files[0];
     inputImage.src = URL.createObjectURL(file);
     imageFile = file;

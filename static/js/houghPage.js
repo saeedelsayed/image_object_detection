@@ -1,5 +1,23 @@
-const image_input = document.querySelector("#image_input");
+const image_input = document.getElementById("image_input");
+const submit_btn = document.getElementById("submit-btn");
 var uploaded_image = "";
+
+submit_btn.addEventListener("click", function(){
+    const formData = new FormData();
+    formData.append("image", uploaded_image);
+    $.ajax({
+        type: "POST",
+        url: "/hough",
+        enctype: "multipart/form-data",
+        data: formData,
+        processData: false,
+        contentType: false,
+        async: true,
+        success: function (res) {
+            console.log(res);
+        },
+    });
+});
 
 image_input.addEventListener("change", function(){
     const reader = new FileReader();
@@ -31,7 +49,8 @@ var options = document.getElementsByClassName("dropdown-content")[0].getElements
 
 // Add click event listener to each option
 for (var i = 0; i < options.length; i++) {
-options[i].addEventListener("click", function() {
-alert(this.innerHTML);
-});
+  options[i].addEventListener("click", function() {
+  console.log(this.innerHTML);
+  option = this.innerHTML;
+  });
 }

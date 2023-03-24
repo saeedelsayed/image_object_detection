@@ -10,7 +10,7 @@
       <h1>Contour object detection</h1>
     </header>
 
-    <input type="file" id="inputImage" accept="image/*" onchange="loadImage()" />
+    <input type="file" id="inputImage" accept="image/*" />
     <canvas id="myCanvas"></canvas>
 
 
@@ -19,8 +19,8 @@
     <a href="{{ url_for('page2') }}">
       <i class="arrow right"></i>
     </a>
-
-        <script src="{{ url_for('static', filename = 'js/page1.js') }}"></script>
-        
+    <input type="submit" id="submit-btn">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename = 'js/contourPage.js')}}"></script>  
   </body>
 </html>

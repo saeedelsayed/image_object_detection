@@ -19,9 +19,9 @@
         <div class="dropdown">
           <button class="dropbtn">Detection type</button>
           <div class="dropdown-content">
-          <a href="#">Line detection</a>
-          <a href="#">Circle detection</a>
-          <a href="#">Ellipse detection</a>
+            <a href="#">Line detection</a>
+            <a href="#">Circle detection</a>
+            <a href="#">Ellipse detection</a>
           </div>
           </div>
 
@@ -30,8 +30,8 @@
         <a href="{{ url_for('page1') }}">
           <i class="arrow right"></i>
         </a>
-
-        <script src="{{ url_for('static', filename = 'js/page2.js') }}"></script>
-
+        <input type="submit" id="submit-btn">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename = 'js/houghPage.js')}}"></script>
 </body>
 </html>

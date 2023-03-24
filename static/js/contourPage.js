@@ -1,6 +1,11 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
+const image_input = document.querySelector("#inputImage");
 let img = new Image();
+image_input.addEventListener("change", function(){
+  loadImage();
+});
+
 
 function loadImage() {
   img.onload = function() {
@@ -36,4 +41,5 @@ canvas.addEventListener('mousemove', function(e) {
 canvas.addEventListener('mouseup', function(e) {
   isDragging = false;
   console.log(`Selected region: (${startX}, ${startY}) - (${endX}, ${endY})`);
+  main.sendData();
 });
