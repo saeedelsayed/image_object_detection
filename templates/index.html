@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/cropper.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Upload Image -->
+    <input id="input-btn" type="file" accept="image/jpeg, image/png, image/jpg">
+
+    <div id="input-image-container" class="img">
+        <img id="input-img" width="100%">
+    </div>
+
+    <input type="submit" id="submit-btn">
+
+</body>
+
+<script defer src="{{url_for('static', filename = './js/main.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/static/js/cropper.js"></script>
+
+</html>
