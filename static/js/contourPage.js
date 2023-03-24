@@ -41,5 +41,20 @@ canvas.addEventListener('mousemove', function(e) {
 canvas.addEventListener('mouseup', function(e) {
   isDragging = false;
   console.log(`Selected region: (${startX}, ${startY}) - (${endX}, ${endY})`);
-  main.sendData();
+  let formData = new FormData();
+  formData.append("cropperData", JSON.stringify({
+    startX: startX,
+    startY: startY,
+    endX: endX,
+    endY: endY
+  }));
+  $.ajax({
+    type: "POST",
+    url: "/activeContour",
+    data: formData,
+    contentType: "application/json",
+    success: function (res) {
+      console.log(res);
+    }
+  })
 });

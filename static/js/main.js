@@ -45,7 +45,6 @@ function sendData() {
             console.log(res);
         },
     });
-
 }
 
 function sendImageFile(imagefile) {

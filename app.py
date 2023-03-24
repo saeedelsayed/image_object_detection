@@ -35,6 +35,13 @@ def activeContour():
                        init)
     return "Active Contour is Done"
 
+@object_detection_app.route("/hough",methods =["POST","GET"])
+def hough():
+    image = request.files['image']
+    imageShow = Image.open(image)
+    imageShow.save(f"static/assets/image.png")
+    return "Hough detection is Done"
+
 @object_detection_app.route("/data",methods = ["POST","GET"])
 def data():
     data =  request.form['cropperData'] 
